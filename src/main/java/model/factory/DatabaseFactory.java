@@ -1,4 +1,4 @@
-﻿package model.factory;
+package model.factory;
 
 /*
  * Fábrica para la creación de instancias de DAOs

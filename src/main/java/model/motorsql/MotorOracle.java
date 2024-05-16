@@ -1,4 +1,4 @@
-﻿package model.motorsql;
+package model.motorsql;
 
 /*
  * Motor para la conexión con Oracle

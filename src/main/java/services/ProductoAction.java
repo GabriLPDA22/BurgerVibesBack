@@ -1,4 +1,4 @@
-﻿package services;
+package services;
 
 /*
  * Acción para gestionar las operaciones relacionadas con Productos

@@ -1,4 +1,4 @@
-﻿package model.dao;
+package model.dao;
 
 import model.entities.Empleado;
 import model.motorsql.MotorSQL;

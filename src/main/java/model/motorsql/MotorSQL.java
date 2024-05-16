@@ -1,4 +1,4 @@
-﻿package model.motorsql;
+package model.motorsql;
 
 /*
  * Motor genérico para la conexión con bases de datos SQL

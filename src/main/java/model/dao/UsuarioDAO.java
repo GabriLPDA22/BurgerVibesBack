@@ -1,4 +1,4 @@
-﻿package model.dao;
+package model.dao;
 
 /*
  * DAO para la entidad Usuario
