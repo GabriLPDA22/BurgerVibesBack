@@ -7,26 +7,7 @@
     <list default="true" id="eb1f04d9-6657-4be1-b2b4-43a50e76df8e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/DAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/DAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/EmpleadoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/EmpleadoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/ProductoDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/ProductoDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/UsuarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/UsuarioDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Bebida.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Bebida.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Empleado.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Empleado.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Entrante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Entrante.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Hamburguesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Hamburguesa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Postre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Postre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Producto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Producto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/entities/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/factory/DatabaseFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/factory/DatabaseFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorMySQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorMySQL.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorOracle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorOracle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorPostgre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorPostgre.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/motorsql/MotorSQL.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/EmpleadoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/EmpleadoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/IAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/IAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/ProductoAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/ProductoAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/UsuarioAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/UsuarioAction.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,22 +35,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "last_opened_file_path": "C:/Programacion/Tomcat",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Programacion/Tomcat&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="TFG_1DAW_Back" />
@@ -93,9 +74,6 @@
       <option name="catalinaBase" value="C:\Programacion\Tomcat" />
       <option name="contextPath" value="/miaplicacion" />
       <option name="docBase" value="D:\Gabriel\Programacion\HTML,CSS,JS\TFG_1DAW_Back" />
-      <option name="envOptions">
-        <map />
-      </option>
       <option name="extraClassPath" value="" />
       <option name="tomcatInfo">
         <TomcatInfo>
@@ -121,6 +99,10 @@
       <updated>1715884477993</updated>
     </task>
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:com.google.protobuf:protobuf-java" />
+    <option featureType="dependencySupport" implementationName="maven-packaging:war" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
