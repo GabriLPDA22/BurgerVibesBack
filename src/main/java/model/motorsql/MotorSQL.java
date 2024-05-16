@@ -18,8 +18,9 @@ public class MotorSQL {
     private Statement st = null;
     private ResultSet rs = null;
     private PreparedStatement ps = null;
-    
-    private static final String URL = "jdbc:mysql://burgervibesbbdd.ceotvomboedr.us-east-1.rds.amazonaws.com";
+
+    private static final String URL = "jdbc:oracle:thin:@burgervibesbbdd.ceotvomboedr.us-east-1.rds.amazonaws.com:1521:orcl";
+
     private static final String USER = "admin";
     private static final String PASSWORD = "123456789";
 
