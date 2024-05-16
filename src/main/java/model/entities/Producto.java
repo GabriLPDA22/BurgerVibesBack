@@ -4,5 +4,10 @@
  * Entidad Producto
  */
 public class Producto {
-    // Atributos y métodos de Producto
+    private String idProducto;
+private String nombre;
+private String descripcion;
+private double precio;
+
+    // Constructor, getters y setters
 }

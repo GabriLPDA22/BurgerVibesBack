@@ -4,5 +4,10 @@
  * Entidad Usuario
  */
 public class Usuario {
-    // Atributos y métodos de Usuario
+    private String idUsuario;
+private String nombre;
+private String email;
+private String telefono;
+
+    // Constructor, getters y setters
 }

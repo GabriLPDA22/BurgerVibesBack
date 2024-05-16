@@ -4,5 +4,7 @@
  * DAO para la entidad Producto
  */
 public class ProductoDAO {
-    // Atributos y métodos de ProductoDAO
+    
+
+    // Constructor, getters y setters
 }
