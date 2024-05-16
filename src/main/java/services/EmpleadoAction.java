@@ -13,7 +13,7 @@ import com.google.gson.GsonBuilder;
 
 public class EmpleadoAction {
 
-    public String execute(HttpServletRequest request, HttpServletResponse response) {
+    public String execute(HttpServletRequest request, HttpServletResponse response, String s) {
         String cadDestino = "";
         String action = request.getParameter("ACTION");
         switch (action) {

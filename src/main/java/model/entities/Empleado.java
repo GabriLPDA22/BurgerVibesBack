@@ -11,7 +11,7 @@ public class Empleado {
     private String Telefono;
     private int ID_ZonaPrivada;
 
-    public Empleado(int ID_Empleado, String Nombre, String Apellidos, String Direccion, String Cargo, String Email, String Telefono, int ID_ZonaPrivada) {
+    public Empleado() {
         this.ID_Empleado = ID_Empleado;
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
@@ -22,9 +22,6 @@ public class Empleado {
         this.ID_ZonaPrivada = ID_ZonaPrivada;
     }
 
-    public Empleado() {
-        //TODO Auto-generated constructor stub
-    }
 
     public int getID_Empleado() {
         return ID_Empleado;

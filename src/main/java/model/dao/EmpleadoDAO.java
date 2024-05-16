@@ -12,6 +12,7 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
     private final String SQL_FIND_ALL = "SELECT * FROM empleados";
 
     private MotorSQL motorSQL;
+    private int id;
 
     public EmpleadoDAO() {
         this.motorSQL = new MotorSQL();
@@ -71,7 +72,8 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
         return isAdded;
     }
 
-    public boolean delete(int id) {
+    @Override
+    public boolean delete(Integer e) {
         boolean isDeleted = false;
         String sql = "DELETE FROM empleados WHERE ID_Empleado=?";
         this.motorSQL.connect();
@@ -88,7 +90,8 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
         return isDeleted;
     }
 
-    public boolean update(Empleado empleado) {
+
+    public int update(Empleado empleado) {
         boolean isUpdated = false;
         String sql = "UPDATE empleados SET Nombre=?, Apellidos=?, Direccion=?, Cargo=?, Email=?, Telefono=?, ID_ZonaPrivada=? WHERE ID_Empleado=?";
         this.motorSQL.connect();
@@ -107,9 +110,15 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
             sqlex.getMessage();
             System.out.println(sqlex);
         } finally {
-            this.motorSQL.disconnect();
+
         }
-        return isUpdated;
+        this.motorSQL.disconnect();
+        return Integer.parseInt(null);
+    }
+
+    @Override
+    public ArrayList<Empleado> findAll(Empleado bean) {
+        return null;
     }
 
     // Implement other methods (find by ID, find by filter, etc.) as needed
