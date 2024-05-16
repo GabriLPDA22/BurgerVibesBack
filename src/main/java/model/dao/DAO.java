@@ -1,6 +1,8 @@
-﻿/*
- * Interfaz base para los DAOs.
+﻿package model.dao;
+
+/*
+ * Interfaz base para los DAOs
  */
-public interface DAO {
-    // Definir métodos CRUD básicos
+public class DAO {
+    // Atributos y métodos de DAO
 }

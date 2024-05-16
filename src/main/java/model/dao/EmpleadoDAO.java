@@ -1,6 +1,8 @@
-﻿/*
- * DAO para la entidad Empleado.
+﻿package model.dao;
+
+/*
+ * DAO para la entidad Empleado
  */
-public interface EmpleadoDAO extends DAO {
-    // Métodos específicos para Empleado
+public class EmpleadoDAO {
+    // Atributos y métodos de EmpleadoDAO
 }

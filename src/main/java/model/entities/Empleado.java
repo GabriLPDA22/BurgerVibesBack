@@ -1,5 +1,7 @@
-﻿/*
- * Entidad Empleado.
+﻿package model.entities;
+
+/*
+ * Entidad Empleado
  */
 public class Empleado {
     // Atributos y métodos de Empleado

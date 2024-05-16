@@ -1,6 +1,8 @@
-﻿/*
- * Motor genérico para la conexión con bases de datos SQL.
+﻿package model.motorsql;
+
+/*
+ * Motor genérico para la conexión con bases de datos SQL
  */
 public class MotorSQL {
-    // Métodos de conexión y operaciones con bases de datos SQL
+    // Atributos y métodos de MotorSQL
 }

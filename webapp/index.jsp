@@ -1,12 +1,8 @@
-﻿<!--
-    Página JSP principal de la aplicación.
--->
-<html>
-<body>
-<h2>Hello World!</h2>
-<form action="Controller" method="get">
-    <input type="submit" value="Llamar al Servlet">
-</form>
+﻿package webapp;
 
-</body>
-</html>
+/*
+ * Página JSP principal de la aplicación
+ */
+public class IndexJSP {
+    // Atributos y métodos de IndexJSP
+}

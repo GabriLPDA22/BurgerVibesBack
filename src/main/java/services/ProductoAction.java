@@ -1,6 +1,8 @@
-﻿/*
- * Acción para gestionar las operaciones relacionadas con Productos.
+﻿package services;
+
+/*
+ * Acción para gestionar las operaciones relacionadas con Productos
  */
-public class ProductoAction implements IAction {
-    // Implementación de métodos específicos para Productos
+public class ProductoAction {
+    // Atributos y métodos de ProductoAction
 }

@@ -1,6 +1,8 @@
-﻿/*
- * DAO para la entidad Usuario (clientes).
+﻿package model.dao;
+
+/*
+ * DAO para la entidad Usuario
  */
-public interface UsuarioDAO extends DAO {
-    // Métodos específicos para Usuario
+public class UsuarioDAO {
+    // Atributos y métodos de UsuarioDAO
 }

@@ -1,3 +1,2 @@
-public class Productos {
-    
-}
+package model.entities;
+public class Productos {      }

@@ -1,6 +1,8 @@
-﻿/*
- * Interfaz base para las acciones.
+﻿package services;
+
+/*
+ * Interfaz base para las acciones
  */
-public interface IAction {
-    // Definir métodos comunes para las acciones
+public class IAction {
+    // Atributos y métodos de IAction
 }

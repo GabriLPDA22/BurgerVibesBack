@@ -1,6 +1,8 @@
-﻿/*
- * Fábrica para la creación de instancias de DAOs.
+﻿package model.factory;
+
+/*
+ * Fábrica para la creación de instancias de DAOs
  */
 public class DatabaseFactory {
-    // Métodos para obtener instancias de DAOs
+    // Atributos y métodos de DatabaseFactory
 }

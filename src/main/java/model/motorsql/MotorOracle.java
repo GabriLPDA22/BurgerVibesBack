@@ -1,9 +1,8 @@
-﻿/*
- * Motor para la conexión con Oracle.
+﻿package model.motorsql;
+
+/*
+ * Motor para la conexión con Oracle
  */
 public class MotorOracle {
-    // Métodos de conexión y operaciones con Oracle
+    // Atributos y métodos de MotorOracle
 }
-
-
-
