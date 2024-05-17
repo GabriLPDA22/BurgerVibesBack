@@ -12,6 +12,10 @@ public class Empleado {
     private int ID_ZonaPrivada;
 
     public Empleado() {
+        // Constructor predeterminado
+    }
+
+    public Empleado(int ID_Empleado, String Nombre, String Apellidos, String Direccion, String Cargo, String Email, String Telefono, int ID_ZonaPrivada) {
         this.ID_Empleado = ID_Empleado;
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
@@ -21,7 +25,6 @@ public class Empleado {
         this.Telefono = Telefono;
         this.ID_ZonaPrivada = ID_ZonaPrivada;
     }
-
 
     public int getID_Empleado() {
         return ID_Empleado;

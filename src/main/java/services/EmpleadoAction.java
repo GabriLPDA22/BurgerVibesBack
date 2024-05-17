@@ -11,16 +11,17 @@ import model.dao.EmpleadoDAO;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class EmpleadoAction {
+public class EmpleadoAction implements IAction {
 
-    public String execute(HttpServletRequest request, HttpServletResponse response, String s) {
+    @Override
+    public String execute(HttpServletRequest request, HttpServletResponse response, String action) {
         String cadDestino = "";
-        String action = request.getParameter("ACTION");
         switch (action) {
             case "SQL_FIND_ALL":
                 cadDestino = findAll(request, response);
                 break;
-            // Puedes agregar más casos si tienes más acciones
+            default:
+                cadDestino = "Unknown action: " + action;
         }
         return cadDestino;
     }

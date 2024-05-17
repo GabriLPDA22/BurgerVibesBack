@@ -2,7 +2,7 @@ package model.motorsql;
 
 /*
  * Motor genérico para la conexión con bases de datos SQL
-*/
+ */
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -10,7 +10,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
-
 
 public class MotorSQL {
     // Objetos necesarios para hablar con la BD
@@ -20,7 +19,6 @@ public class MotorSQL {
     private PreparedStatement ps = null;
 
     private static final String URL = "jdbc:oracle:thin:@burgervibesbbdd.ceotvomboedr.us-east-1.rds.amazonaws.com:1521:orcl";
-
     private static final String USER = "admin";
     private static final String PASSWORD = "123456789";
 
@@ -31,11 +29,11 @@ public class MotorSQL {
             st = conn.createStatement();
         } catch (SQLException ex) {
             // Manejar errores
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+            System.err.println("SQLException: " + ex.getMessage());
+            System.err.println("SQLState: " + ex.getSQLState());
+            System.err.println("VendorError: " + ex.getErrorCode());
         } catch (Exception ex) {
-            System.out.println(ex.getMessage());
+            System.err.println("Exception: " + ex.getMessage());
         }
     }
 
@@ -45,9 +43,9 @@ public class MotorSQL {
             rs = st.executeQuery(sql);
         } catch (SQLException ex) {
             // Manejar errores
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+            System.err.println("SQLException: " + ex.getMessage());
+            System.err.println("SQLState: " + ex.getSQLState());
+            System.err.println("VendorError: " + ex.getErrorCode());
         }
         return rs;
     }
@@ -59,9 +57,9 @@ public class MotorSQL {
             iResults = st.executeUpdate(sql);
         } catch (SQLException ex) {
             // Manejar errores
-            System.out.println("SQLException: " + ex.getMessage());
-            System.out.println("SQLState: " + ex.getSQLState());
-            System.out.println("VendorError: " + ex.getErrorCode());
+            System.err.println("SQLException: " + ex.getMessage());
+            System.err.println("SQLState: " + ex.getSQLState());
+            System.err.println("VendorError: " + ex.getErrorCode());
         }
         return iResults;
     }
@@ -94,37 +92,20 @@ public class MotorSQL {
 
     // Desconectar de la base de datos
     public void disconnect() {
-        if (rs != null) {
+        close(rs);
+        close(st);
+        close(ps);
+        close(conn);
+    }
+
+    // Método auxiliar para cerrar recursos
+    private void close(AutoCloseable ac) {
+        if (ac != null) {
             try {
-                rs.close();
-            } catch (SQLException sqlEx) {
-                // Ignorar
+                ac.close();
+            } catch (Exception e) {
+                System.err.println("Failed to close resource: " + e.getMessage());
             }
-            rs = null;
-        }
-        if (st != null) {
-            try {
-                st.close();
-            } catch (SQLException sqlEx) {
-                // Ignorar
-            }
-            st = null;
-        }
-        if (ps != null) {
-            try {
-                ps.close();
-            } catch (SQLException sqlEx) {
-                // Ignorar
-            }
-            ps = null;
-        }
-        if (conn != null) {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                // Ignorar
-            }
-            conn = null;
         }
     }
 }

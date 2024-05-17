@@ -1,50 +1,49 @@
 package services;
 
-import services.EmpleadoAction;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.lang.reflect.Array;
 
 @WebServlet(name = "Controller", urlPatterns = {"/Controller"})
 public class Controller extends HttpServlet {
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException
-    {
-        //request.getMethod()
-        //request.getQueryString()
+            throws ServletException, IOException {
         response.setContentType("text/plain;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String strAction = request.getParameter("ACTION");
-        //ACTION=PELICULA.FIND_ALL --> HAMBURGUER.FIND_ALL // USER.FIND
-        String[] arrayAction= new String[2];;
-        if (strAction != "")
-        {
-            arrayAction = strAction.split("\\."); //[0] PELICULA <-> [1] FIND_ALL
+        String strAction = request.getParameter("ACTION"); // Debe coincidir con el parámetro en la URL
+
+        if (strAction == null || strAction.isEmpty()) {
+            throw new ServletException("No action specified");
         }
-        switch (arrayAction[0].toUpperCase())
-        {
-            case "Empleado":
-            {
-                out.print(new EmpleadoAction().execute(request,response, arrayAction[1]));
+
+        String[] arrayAction = strAction.split("\\.");
+        if (arrayAction.length < 2) {
+            throw new ServletException("Invalid action format");
+        }
+
+        switch (arrayAction[0].toUpperCase()) {
+            case "EMPLEADO":
+                out.print(new EmpleadoAction().execute(request, response, arrayAction[1]));
                 break;
-            }
             default:
-            {
                 System.out.println(arrayAction[0]);
-                throw new ServletException ("Acción " + arrayAction[0] +" no valida");
-            }
+                throw new ServletException("Acción " + arrayAction[0] + " no valida");
         }
         System.out.println(strAction);
     }
+
+    @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
     }
 
-
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
+    }
 }

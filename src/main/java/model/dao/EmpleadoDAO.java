@@ -12,7 +12,6 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
     private final String SQL_FIND_ALL = "SELECT * FROM empleados";
 
     private MotorSQL motorSQL;
-    private int id;
 
     public EmpleadoDAO() {
         this.motorSQL = new MotorSQL();
@@ -27,7 +26,7 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
 
             while (rs.next()) {
                 Empleado empleado = new Empleado();
-                
+
                 empleado.setID_Empleado(rs.getInt("ID_Empleado"));
                 empleado.setNombre(rs.getString("Nombre"));
                 empleado.setApellidos(rs.getString("Apellidos"));
@@ -41,14 +40,14 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
             }
 
         } catch (SQLException sqlex) {
-            sqlex.getMessage();
-            System.out.println(sqlex);
+            sqlex.printStackTrace();
         } finally {
             this.motorSQL.disconnect();
         }
         return empleados;
     }
 
+    @Override
     public boolean add(Empleado empleado) {
         boolean isAdded = false;
         String sql = "INSERT INTO empleados (Nombre, Apellidos, Direccion, Cargo, Email, Telefono, ID_ZonaPrivada) VALUES (?, ?, ?, ?, ?, ?, ?)";
@@ -64,8 +63,7 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
             this.motorSQL.setInt(7, empleado.getID_ZonaPrivada());
             isAdded = this.motorSQL.executeUpdate() > 0;
         } catch (SQLException sqlex) {
-            sqlex.getMessage();
-            System.out.println(sqlex);
+            sqlex.printStackTrace();
         } finally {
             this.motorSQL.disconnect();
         }
@@ -79,18 +77,17 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
         this.motorSQL.connect();
         try {
             this.motorSQL.prepareStatement(sql);
-            this.motorSQL.setInt(1, id);
+            this.motorSQL.setInt(1, e); // Usar el parámetro e en lugar de id
             isDeleted = this.motorSQL.executeUpdate() > 0;
         } catch (SQLException sqlex) {
-            sqlex.getMessage();
-            System.out.println(sqlex);
+            sqlex.printStackTrace();
         } finally {
             this.motorSQL.disconnect();
         }
         return isDeleted;
     }
 
-
+    @Override
     public int update(Empleado empleado) {
         boolean isUpdated = false;
         String sql = "UPDATE empleados SET Nombre=?, Apellidos=?, Direccion=?, Cargo=?, Email=?, Telefono=?, ID_ZonaPrivada=? WHERE ID_Empleado=?";
@@ -107,19 +104,18 @@ public class EmpleadoDAO implements DAO<Empleado, Integer> {
             this.motorSQL.setInt(8, empleado.getID_Empleado());
             isUpdated = this.motorSQL.executeUpdate() > 0;
         } catch (SQLException sqlex) {
-            sqlex.getMessage();
-            System.out.println(sqlex);
+            sqlex.printStackTrace();
         } finally {
-
+            this.motorSQL.disconnect();
         }
-        this.motorSQL.disconnect();
-        return Integer.parseInt(null);
+        return isUpdated ? 1 : 0; // Devolver un valor significativo
     }
 
-    @Override
-    public ArrayList<Empleado> findAll(Empleado bean) {
-        return null;
-    }
+    // Eliminar este método si no es necesario
+    // @Override
+    // public ArrayList<Empleado> findAll(Empleado bean) {
+    //    return null;
+    // }
 
-    // Implement other methods (find by ID, find by filter, etc.) as needed
+    // Implementar otros métodos (find by ID, find by filter, etc.) según sea necesario
 }
