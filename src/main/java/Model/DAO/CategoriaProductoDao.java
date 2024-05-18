@@ -1,5 +1,4 @@
 package Model.DAO;
-
 import Model.Entities.CategoriaProducto;
 import Model.MotorOracle.MotorOracle;
 

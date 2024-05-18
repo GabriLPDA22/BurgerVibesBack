@@ -1,2 +1,4 @@
-package Model.Entities;public class Producto {
+package Model.Entities;
+
+public class Producto {
 }
