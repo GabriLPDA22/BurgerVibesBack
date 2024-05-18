@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e8df8536-33f5-4797-b0cc-33a3befd292a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Back_TFG.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/javax_servlet_api.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/oracle_database_jdbc_ojdbc11.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BuergerVibes/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/html/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/html/js/gestor_servicios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/lib/mysql-connector-j-8.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/lib/ojdbc11-21.3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/lib/protobuf-java-3.25.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Action/CategoriaProductoAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Action/ClienteAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Action/EmpleadoAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Action/IAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/DAO/CategoriaProductoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/DAO/ClienteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/DAO/EmpleadoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/DAO/IDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/Entities/CategoriaProducto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/Entities/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/Entities/Empleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/java/Model/MotorOracle/MotorOracle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/webapp/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BurgerVibesArchetype/src/main/webapp/js/gestor_servicios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/js/gestor_servicios.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/javax.servlet-api-4.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mysql-connector-j-8.4.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ojdbc11-21.3.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/protobuf-java-3.25.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/CategoriaProductoAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/ClienteAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/EmpleadoAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/IAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Action/ZonaPrivadaAction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/CategoriaProductoDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/ClienteDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/EmpleadoDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/IDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/DAO/ZonaPrivadaDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Entities/CategoriaProducto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Entities/Cliente.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Entities/Empleado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Entities/Producto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Entities/ZonaPrivada.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/MotorOracle/MotorOracle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/gestor_servicios.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GabriLPDA22&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/GabriLPDA22/BurgerVibesBack.git&quot;,
+    &quot;accountId&quot;: &quot;95944374-259f-44e5-994c-5e061383cb37&quot;
+  }
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BurgerVibesBack/BurgerVibesArchetype/src/main/java/Model/Entities/CategoriaProducto.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2gdo5hF3uwFaA2CGcH7uBP45Nua" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Smart Tomcat.BurgerVibes.executor&quot;: &quot;Debug&quot;,
+    &quot;Smart Tomcat.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/apache-tomcat-8.5.100&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="BurgerVibes" type="com.poratu.idea.plugins.tomcat">
+      <predefined_log_file enabled="true" id="Tomcat Localhost Log" />
+      <predefined_log_file enabled="true" id="Tomcat Access Log" />
+      <predefined_log_file id="Tomcat Catalina Log" />
+      <predefined_log_file id="Tomcat Manager Log" />
+      <predefined_log_file id="Tomcat Host Manager Log" />
+      <option name="catalinaBase" value="C:\apache-tomcat-8.5.100" />
+      <option name="contextPath" value="/BurgerVibes" />
+      <option name="docBase" value="C:\Programacion\HTML,CSS,JS\TFG\Back_TFG" />
+      <option name="extraClassPath" value="" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat/8.5.100 (2)" />
+          <option name="path" value="$PROJECT_DIR$/../../../../apache-tomcat-8.5.100" />
+          <option name="version" value="8.5.100.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <module name="Back_TFG" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e8df8536-33f5-4797-b0cc-33a3befd292a" name="Changes" comment="" />
+      <created>1716036634406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716036634406</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
