@@ -90,7 +90,7 @@ public class Controller extends HttpServlet {
         processRequest(request, response);
     }
 
-    @Override
+    @Override//actualizar e insertar
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);

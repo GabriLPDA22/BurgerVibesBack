@@ -30,7 +30,7 @@ public class DetallesPedidoDao implements IDao {
 
     @Override
     public ArrayList<DetallesPedido> findAll(Object bean) {
-        ArrayList<DetallesPedido> detallesPedidos = new ArrayList<>();
+        ArrayList<DetallesPedido> detallesPedidos = new ArrayList<DetallesPedido>();
         MotorOracle motor = new MotorOracle();
         try {
             motor.connect();
