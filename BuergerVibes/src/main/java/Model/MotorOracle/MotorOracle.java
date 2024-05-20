@@ -62,6 +62,19 @@ public class MotorOracle {
         }
         return iResults;
     }
+    public int executeDelete(String sql) {
+        int affectedRows = 0;
+        try {
+            affectedRows = st.executeUpdate(sql);
+        } catch (SQLException ex) {
+            // Manejar errores
+            System.out.println("SQLException: " + ex.getMessage());
+            System.out.println("SQLState: " + ex.getSQLState());
+            System.out.println("VendorError: " + ex.getErrorCode());
+        }
+        return affectedRows;
+    }
+
 
     public void disconnect()
     {

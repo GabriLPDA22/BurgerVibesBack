@@ -8,20 +8,20 @@ import java.util.ArrayList;
 
 public class Empleado {
 
-    private int ID_Empleado;
+    private String ID_Empleado;  // Cambiado a String
     private String Nombre;
     private String Apellidos;
     private String Direccion;
     private String Cargo;
     private String Email;
     private String Telefono;
-    private int ID_ZonaPrivada;
+    private String ID_ZonaPrivada;  // Cambiado a String
 
     public Empleado() {
         // Constructor predeterminado
     }
 
-    public Empleado(int ID_Empleado, String Nombre, String Apellidos, String Direccion, String Cargo, String Email, String Telefono, int ID_ZonaPrivada) {
+    public Empleado(String ID_Empleado, String Nombre, String Apellidos, String Direccion, String Cargo, String Email, String Telefono, String ID_ZonaPrivada) {
         this.ID_Empleado = ID_Empleado;
         this.Nombre = Nombre;
         this.Apellidos = Apellidos;
@@ -37,14 +37,13 @@ public class Empleado {
         builder.setPrettyPrinting();
         Gson gson = builder.create();
         return gson.toJson(Empleado);
-
     }
 
-    public int getID_Empleado() {
+    public String getID_Empleado() {
         return ID_Empleado;
     }
 
-    public void setID_Empleado(int ID_Empleado) {
+    public void setID_Empleado(String ID_Empleado) {
         this.ID_Empleado = ID_Empleado;
     }
 
@@ -96,27 +95,25 @@ public class Empleado {
         this.Telefono = Telefono;
     }
 
-    public int getID_ZonaPrivada() {
+    public String getID_ZonaPrivada() {
         return ID_ZonaPrivada;
     }
 
-    public void setID_ZonaPrivada(int ID_ZonaPrivada) {
+    public void setID_ZonaPrivada(String ID_ZonaPrivada) {
         this.ID_ZonaPrivada = ID_ZonaPrivada;
     }
 
     @Override
     public String toString() {
         return "Empleado{" +
-                "ID_Empleado=" + ID_Empleado +
-                ", Nombre='" + Nombre + '\'' +
-                ", Apellidos='" + Apellidos + '\'' +
-                ", Direccion='" + Direccion + '\'' +
-                ", Cargo='" + Cargo + '\'' +
-                ", Email='" + Email + '\'' +
-                ", Telefono='" + Telefono + '\'' +
-                ", ID_ZonaPrivada=" + ID_ZonaPrivada +
-                '}';
+                "ID_Empleado='" + ID_Empleado + "'" +
+        ", Nombre='" + Nombre + "'" +
+        ", Apellidos='" + Apellidos + "'" +
+        ", Direccion='" + Direccion + "'" +
+        ", Cargo='" + Cargo + "'" +
+        ", Email='" + Email + "'" +
+        ", Telefono='" + Telefono + "'" +
+        ", ID_ZonaPrivada='" + ID_ZonaPrivada + "'" +
+        '}';
     }
 }
-
-

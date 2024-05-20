@@ -1,8 +1,5 @@
 package Controller;
-import Action.CategoriaProductoAction;
-import Action.EmpleadoAction;
-import Action.ProductoAction;
-import Action.ZonaPrivadaAction;
+import Action.*;
 
 
 import javax.servlet.ServletException;
@@ -53,6 +50,31 @@ public class Controller extends HttpServlet {
             case "EMPLEADO":
             {
                 out.print(new EmpleadoAction().execute(request,response, arrayAction[1]));
+                break;
+            }
+            case "CLIENTE":
+            {
+                out.print(new ClienteAction().execute(request,response, arrayAction[1]));
+                break;
+            }
+            case "PEDIDO":
+            {
+                out.print(new PedidoAction().execute(request,response, arrayAction[1]));
+                break;
+            }
+            case "PAGO":
+            {
+                out.print(new PagoAction().execute(request,response, arrayAction[1]));
+                break;
+            }
+            case "DETALLESPAGO":
+            {
+                out.print(new DetallesPagoAction().execute(request,response, arrayAction[1]));
+                break;
+            }
+            case "DETALLESPEDIDO":
+            {
+                out.print(new DetallesPedidoAction().execute(request,response, arrayAction[1]));
                 break;
             }
             default:

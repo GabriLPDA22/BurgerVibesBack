@@ -4,10 +4,12 @@ import Model.Entities.Empleado;
 import Model.MotorOracle.MotorOracle;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class EmpleadoDAO implements IDao {
     private final String SQL_FIND_ALL = "SELECT * FROM EMPLEADO WHERE 1=1 ";
+    private final String SQL_DELETE = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO = ?";
 
     @Override
     public int add(Object bean) {
@@ -15,9 +17,21 @@ public class EmpleadoDAO implements IDao {
     }
 
     @Override
-    public int delete(Integer e) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public int delete(Integer id) {
+        int rowsDeleted = 0;
+        MotorOracle motor = new MotorOracle();
+        try {
+            motor.connect();
+            String SQL_DELETE = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO = " + id;
+            rowsDeleted = motor.executeDelete(SQL_DELETE);
+            System.out.println("Filas eliminadas: " + rowsDeleted);
+        } finally {
+            motor.disconnect();
+        }
+        return rowsDeleted;
     }
+
+
 
     @Override
     public int update(Object bean) {
@@ -32,7 +46,7 @@ public class EmpleadoDAO implements IDao {
             motor.connect();
             String sql = SQL_FIND_ALL;
             if (bean != null) {
-                if (((Empleado) bean).getID_Empleado() != 0) {
+                if (((Empleado) bean).getID_Empleado() != null && !((Empleado) bean).getID_Empleado().isEmpty()) {
                     sql += " AND ID_EMPLEADO='" + ((Empleado) bean).getID_Empleado() + "'";
                 }
                 if (((Empleado) bean).getNombre() != null) {
@@ -53,28 +67,37 @@ public class EmpleadoDAO implements IDao {
                 if (((Empleado) bean).getTelefono() != null) {
                     sql += " AND TELEFONO='" + ((Empleado) bean).getTelefono() + "'";
                 }
-                if (((Empleado) bean).getID_ZonaPrivada() != 0) { //SE TIENE QUE HACER DE OTRA FORMA YA QUE ES FK
-                    sql += " AND ID_ZONAPRIVADA='" + ((Empleado) bean).getID_ZonaPrivada() + "'";
+                if (((Empleado) bean).getID_ZonaPrivada() != null && !((Empleado) bean).getID_ZonaPrivada().isEmpty()) {
+                    sql += " AND ID_ZONAPRIVADA_EMP='" + ((Empleado) bean).getID_ZonaPrivada() + "'";
                 }
             }
+            System.out.println("Ejecutando SQL: " + sql);
             ResultSet rs = motor.executeQuery(sql);
 
             while (rs.next()) {
                 Empleado empleado = new Empleado();
-                empleado.setID_Empleado(rs.getInt("ID_EMPLEADO"));
-                empleado.setNombre(rs.getString("NOMBRE"));
-                empleado.setApellidos(rs.getString("APELLIDOS"));
-                empleado.setDireccion(rs.getString("DIRECCION"));
-                empleado.setCargo(rs.getString("CARGO"));
-                empleado.setEmail(rs.getString("EMAIL"));
-                empleado.setTelefono(rs.getString("TELEFONO"));
-                empleado.setID_ZonaPrivada(rs.getInt("ID_ZONAPRIVADA"));
+                try {
+                    empleado.setID_Empleado(rs.getString("ID_EMPLEADO"));
+                    empleado.setNombre(rs.getString("NOMBRE"));
+                    empleado.setApellidos(rs.getString("APELLIDOS"));
+                    empleado.setDireccion(rs.getString("DIRECCION"));
+                    empleado.setCargo(rs.getString("CARGO"));
+                    empleado.setEmail(rs.getString("EMAIL"));
+                    empleado.setTelefono(rs.getString("TELEFONO"));
+                    empleado.setID_ZonaPrivada(rs.getString("ID_ZONAPRIVADA_EMP"));
 
-                empleados.add(empleado);
+                    empleados.add(empleado);
+                } catch (SQLException e) {
+                    System.err.println("Error al convertir los datos del empleado: " + e.getMessage());
+                    e.printStackTrace(); // Imprimir la traza completa de la excepción
+                }
             }
+            System.out.println("Número de empleados encontrados: " + empleados.size());
 
         } catch (Exception ex) {
             empleados.clear();
+            System.err.println("Error en findAll: " + ex.getMessage());
+            ex.printStackTrace(); // Imprimir la traza completa de la excepción
         } finally {
             motor.disconnect();
         }
