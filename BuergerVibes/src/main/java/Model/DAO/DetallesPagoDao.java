@@ -4,7 +4,6 @@ import Model.Entities.DetallesPago;
 import Model.MotorOracle.MotorOracle;
 
 import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class DetallesPagoDao implements IDao {
@@ -18,6 +17,11 @@ public class DetallesPagoDao implements IDao {
     @Override
     public int delete(Integer e) {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String delete(String nombre, String apellidos) {
+        return "";
     }
 
     @Override

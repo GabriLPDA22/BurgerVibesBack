@@ -19,6 +19,11 @@ public class DetallesPedidoDao implements IDao {
     }
 
     @Override
+    public String delete(String nombre, String apellidos) {
+        return "";
+    }
+
+    @Override
     public int update(Object bean) {
         throw new UnsupportedOperationException("Not supported yet.");
     }

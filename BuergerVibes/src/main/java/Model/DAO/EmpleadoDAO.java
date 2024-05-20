@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class EmpleadoDAO implements IDao {
     private final String SQL_FIND_ALL = "SELECT * FROM EMPLEADO WHERE 1=1 ";
-    private final String SQL_DELETE = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO = ?";
+    private final String SQL_DELETE = "DELETE FROM NOMBRE WHERE NOMBRE = ?";
 
     @Override
     public int add(Object bean) {
@@ -17,18 +17,22 @@ public class EmpleadoDAO implements IDao {
     }
 
     @Override
-    public int delete(Integer id) {
+    public int delete(Integer bean) {
+        return 0;
+    }
+
+    @Override
+    public String delete(String nombre, String apellidos) {
         int rowsDeleted = 0;
         MotorOracle motor = new MotorOracle();
         try {
             motor.connect();
-            String SQL_DELETE = "DELETE FROM EMPLEADO WHERE ID_EMPLEADO = " + id;
             rowsDeleted = motor.executeDelete(SQL_DELETE);
             System.out.println("Filas eliminadas: " + rowsDeleted);
         } finally {
             motor.disconnect();
         }
-        return rowsDeleted;
+        return String.valueOf(rowsDeleted);
     }
 
 
@@ -40,7 +44,7 @@ public class EmpleadoDAO implements IDao {
 
     @Override
     public ArrayList<Empleado> findAll(Object bean) {
-        ArrayList<Empleado> empleados = new ArrayList<>();
+        ArrayList<Empleado> empleados = new ArrayList<Empleado>();
         MotorOracle motor = new MotorOracle();
         try {
             motor.connect();
