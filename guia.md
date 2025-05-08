@@ -540,7 +540,7 @@ http://localhost:8080/BuergerVibes/Controller?ACTION=CLIENTE.REGISTER&idCliente=
   "Email": "ana@example.com",
   "Telefono": "654789123",
   "FechaRegistro": "2023-05-10",
-  "NombreUsuario": "anal",
+  "NombreUsuario": "ana",
   "Contraseña": "secreto123"
 }
 ```
