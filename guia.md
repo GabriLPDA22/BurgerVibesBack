@@ -545,6 +545,141 @@ http://localhost:8080/BuergerVibes/Controller?ACTION=CLIENTE.REGISTER&idCliente=
 }
 ```
 
+## Implementación de findById para buscar por ID
+
+La búsqueda por ID es una operación muy común en aplicaciones CRUD. A continuación, se detalla cómo implementar un método específico `findById` más eficiente que usar `findAll` con filtros.
+
+### 1. Actualizar el ClienteDAO
+
+Añade este método a tu clase ClienteDAO:
+
+```java
+// Consulta SQL para buscar por ID
+private final String SQL_FIND_BY_ID = "SELECT * FROM CLIENTE WHERE ID_CLIENTE = ?";
+
+// Método para buscar un cliente por su ID
+public Cliente findById(String id) {
+    Cliente cliente = null;
+    MotorOracle motor = new MotorOracle();
+    try {
+        motor.connect();
+        PreparedStatement ps = motor.preparedStatement(SQL_FIND_BY_ID);
+        ps.setString(1, id);
+        ResultSet rs = ps.executeQuery();
+        
+        if (rs.next()) {
+            cliente = new Cliente();
+            cliente.setID_Cliente(rs.getString("ID_CLIENTE"));
+            cliente.setNombre(rs.getString("NOMBRE"));
+            cliente.setDireccion(rs.getString("DIRECCION"));
+            cliente.setEmail(rs.getString("EMAIL"));
+            cliente.setTelefono(rs.getString("TELEFONO"));
+            cliente.setFechaRegistro(rs.getString("FECHAREGISTRO"));
+            cliente.setNombreUsuario(rs.getString("NOMBRE_USUARIO"));
+            cliente.setContraseña(rs.getString("CONTRASEÑA"));
+        }
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            motor.disconnect();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    return cliente;
+}
+```
+
+### 2. Actualizar la ClienteAction
+
+Modifica tu clase ClienteAction para incluir el caso FIND_BY_ID en el método execute:
+
+```java
+@Override
+public String execute(HttpServletRequest request, HttpServletResponse response, String action) {
+    String strReturn = "";
+    switch (action) {
+        case "FIND_ALL":
+            strReturn = findAll();
+            break;
+        case "FIND_BY_ID":
+            strReturn = findById(request, response);
+            break;
+        case "LOGIN":
+            strReturn = login(request, response);
+            break;
+        case "REGISTER":
+            strReturn = register(request, response);
+            break;
+        default:
+            strReturn = "{\"message\": \"ERROR. Invalid Action\"}";
+    }
+    return strReturn;
+}
+
+// Método para buscar cliente por ID
+private String findById(HttpServletRequest request, HttpServletResponse response) {
+    String idCliente = request.getParameter("idCliente");
+    
+    if (idCliente == null || idCliente.isEmpty()) {
+        response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+        return "{\"message\": \"ERROR. Se requiere ID de cliente\"}";
+    }
+    
+    ClienteDAO clienteDao = new ClienteDAO();
+    Cliente cliente = clienteDao.findById(idCliente);
+    
+    if (cliente != null) {
+        return gson.toJson(cliente);
+    } else {
+        response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+        return "{\"message\": \"ERROR. Cliente no encontrado\"}";
+    }
+}
+```
+
+### 3. Cómo usar el nuevo endpoint
+
+Ahora puedes hacer pruebas usando la siguiente URL:
+
+```
+http://localhost:8080/BuergerVibes/Controller?ACTION=CLIENTE.FIND_BY_ID&idCliente=C001
+```
+
+### 4. Respuestas esperadas
+
+Si el cliente existe:
+
+```json
+{
+  "ID_Cliente": "C001",
+  "Nombre": "Juan Pérez",
+  "Direccion": "Calle Principal 123",
+  "Email": "juan@example.com",
+  "Telefono": "123456789",
+  "FechaRegistro": "2023-01-15",
+  "NombreUsuario": "juanp",
+  "Contraseña": "********"
+}
+```
+
+Si el cliente no existe:
+
+```json
+{
+  "message": "ERROR. Cliente no encontrado"
+}
+```
+
+Si no se proporciona un ID:
+
+```json
+{
+  "message": "ERROR. Se requiere ID de cliente"
+}
+```
+
 ## Cómo Añadir una Nueva Entidad
 
 Si necesitas crear una nueva entidad, sigue estos pasos:
@@ -557,7 +692,7 @@ Si necesitas crear una nueva entidad, sigue estos pasos:
 2. **Crea el DAO**:
    - Crea una nueva clase en el paquete `Model.DAO` que implemente `IDao<TuEntidad, String>`
    - Define consultas SQL como constantes
-   - Implementa métodos para operaciones CRUD
+   - Implementa métodos para operaciones CRUD, incluyendo findById
    - Usa MotorOracle para conectarte a la BD
 
 3. **Crea la clase Action**:
@@ -571,6 +706,6 @@ Si necesitas crear una nueva entidad, sigue estos pasos:
 
 ## Conclusión
 
-Ahora deberías tener una buena comprensión de cómo funciona nuestro proyecto BuergerVibes. Recuerda que todas las entidades siguen el mismo patrón, así que una vez que entiendes una, entiendes todas.
+Ahora deberías tener una buena comprensión de cómo funciona nuestro proyecto BuergerVibes y cómo implementar el método findById para realizar búsquedas eficientes por ID. Recuerda que todas las entidades siguen el mismo patrón, así que una vez que entiendes una, entiendes todas.
 
 Si tienes alguna duda o problema, no dudes en preguntarme. ¡Buena suerte con el desarrollo! 😉
